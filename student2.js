@@ -39,15 +39,13 @@ function makeMenu5() {
     html += "<button onclick='execButton936(product2)'>Product #2</button>";
     html += "<button onclick='execButton936(product3)'>Product #3</button>";
     return html;
-} 
-  return html;
 }
 function makeMain3() {
   var html = "";
   html = html + "My Product:<br>";
-  html = html + "Product Name: <br>";
-  html = html + "Product ID: <br>";
-  html = html + "Product Description: <br>";
+  html = html + "Product Name: " + myproduct.name + "<br>";
+  html = html + "Product ID: " + myproduct.id + "<br>";
+  html = html + "Product Description: " + myproduct.desc + <br>";
   html = html + "Shopping Cart Link Bar <br>";
   html = html + "Product Image: <br>";
   return html;
