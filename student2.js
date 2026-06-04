@@ -40,7 +40,7 @@ function makeMenu5() {
     html += "<button onclick='execButton936(product3)'>Product #3</button>";
     return html;
 }
-function makeMain3() {
+function makeMain3(myproduct) {
   var html = "";
   html = html + "My Product:<br>";
   html = html + "Product Name: " + myproduct.name + "<br>";
