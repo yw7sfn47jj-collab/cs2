@@ -84,7 +84,7 @@ function dealCards244() {
 }
 function makeLinkBar270(myproduct) {
     var html = "";
-    html = html + "<a href='https://www.paypal.com'>Add ";
+    html = html + "<a href='https://developer.paypal.com/tools/sandbox/'>Add ";
     html = html + myproduct.name;
     html = html + " To Cart</a>";
     return html;
