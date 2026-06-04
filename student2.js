@@ -15,5 +15,26 @@ function getFooter(cname, address, phone) {
   html = html + address + "<br>";
   html = html + phone;
   html = html + "</div>";
+  html = html + "<br>";
+  html = html + navigator.appName + " ";
+  html = html + navigator.appVersion + " ";
+  html = html + navigator.platform;
+  return html;
+}
+function makeMenu5(size) {
+  var html = "My Menu:<br>";
+  for (var i = 0; i < size; i++) {
+    html = html + "Button ";
+  } 
+  return html;
+}
+function makeMain3() {
+  var html = "";
+  html = html + "My Product:<br>";
+  html = html + "Product Name: <br>";
+  html = html + "Product ID: <br>";
+  html = html + "Product Description: <br>";
+  html = html + "Shopping Cart Link Bar <br>";
+  html = html + "Product Image: <br>";
   return html;
 }
