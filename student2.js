@@ -93,7 +93,7 @@ function makeLinkBar270(myproduct) {
     html = html + " To Cart</a>";
     return html;
 }
-function popupAd9170() {
+function popupAd917() {
     winobj422 = window.open("", "adWindow", "width=350,height=200");
     var html = "";
     if (adnum361 == 1) {
@@ -119,7 +119,7 @@ function popupAd9170() {
     winobj422.document.write(html);
     winobj422.document.close();
 }
-function closeAd9170() {
+function closeAd917() {
     if (winobj422 != -1) {
         winobj422.close();
     }
