@@ -49,8 +49,8 @@ function makeMenu5() {
     html += "<button onclick='dealCards244()'>Deal Cards</button>";
     html += "<button onclick='hitCard236()'>Hit Card</button>";
     html += "<button onclick='popupAd9170()'>PopUp Ad</button>";
-    html += "<button onclick='closeAd9170()'>Close Ad</button>";
-    html += "<button onclick='makeForm5710()'>Enter Data</button>";
+    html += "<button onclick='closeAd917()'>Close Ad</button>";
+    html += "<button onclick='makeForm571()'>Enter Data</button>";
     return html;
 }
 function makeMain3(myproduct) {
