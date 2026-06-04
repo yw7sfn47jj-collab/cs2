@@ -50,6 +50,7 @@ function makeMenu5() {
     html += "<button onclick='hitCard236()'>Hit Card</button>";
     html += "<button onclick='popupAd9170()'>PopUp Ad</button>";
     html += "<button onclick='closeAd9170()'>Close Ad</button>";
+    html += "<button onclick='makeForm5710()'>Enter Data</button>";
     return html;
 }
 function makeMain3(myproduct) {
@@ -123,4 +124,50 @@ function closeAd917() {
     if (winobj422 != -1) {
         winobj422.close();
     }
+}
+function makeForm5710() {
+    var html = "";
+    html += "<form onSubmit='return checkForm881()' name='customerform'>";
+    html += "<table width='100%' border='1'>";
+    html += "<tr><td>First Name: <input type='text' name='firstname'></td>";
+    html += "<td align='right'>Last Name: <input type='text' name='lastname'></td></tr>";
+    html += "<tr><td colspan='2'>Address: <input type='text' name='address' size='50'></td></tr>";
+    html += "<tr><td>City: <input type='text' name='city'></td>";
+    html += "<td align='right'>State: <input type='text' name='state' size='3'>";
+    html += " Zip: <input type='text' name='zip' size='6'></td></tr>";
+    html += "<tr><td colspan='2'>Email Address: <input type='text' name='emailaddr' size='50'></td></tr>";
+    html += "<tr><td><input type='submit' value='Submit'></td>";
+    html += "<td align='right'><input type='reset'></td></tr>";
+    html += "</table>";
+    html += "</form>";
+    document.getElementById("main829").innerHTML = html;
+}
+function checkForm881() {
+    var msg = "";
+    if (document.customerform.firstname.value == "") {
+        msg += "First Name\n";
+    }
+    if (document.customerform.lastname.value == "") {
+        msg += "Last Name\n";
+    }
+    if (document.customerform.address.value == "") {
+        msg += "Address\n";
+    }
+    if (document.customerform.city.value == "") {
+        msg += "City\n";
+    }
+    if (document.customerform.state.value == "") {
+        msg += "State\n";
+    }
+    if (document.customerform.zip.value == "") {
+        msg += "Zip\n";
+    }
+    if (document.customerform.emailaddr.value == "") {
+        msg += "Email Address\n";
+    }
+    if (msg != "") {
+        alert("Missing:\n" + msg);
+        return false;
+    }
+    return true;
 }
