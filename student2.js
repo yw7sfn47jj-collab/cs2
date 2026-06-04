@@ -125,7 +125,7 @@ function closeAd917() {
         winobj422.close();
     }
 }
-function makeForm5710() {
+function makeForm571() {
     var html = "";
     html += "<form onSubmit='return checkForm881()' name='customerform'>";
     html += "<table width='100%' border='1'>";
