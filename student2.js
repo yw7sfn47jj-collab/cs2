@@ -2,18 +2,21 @@ var imgurl893 = "https://www.college1.com/images/";
 var cardimgurl245 = "https://www.college1.com/images/cards/gbCard";
 var cardnum789 = -1;
 var product1 = {
-    name:"HP 4426",
+    name:"Atomic Habits",
     id:"4426",
-    desc:"Newest and Best Laptop from HP Computer"};
+    desc:"A bestselling book by James Clear about building good habits and breaking bad ones."
+};
 var product2 = {
-    name:"Apple 88123 iPad",
+    name:"The Laws of Human Nature",
     id:"88123",
-    desc:"Apple Tablet Computer"};
+    desc:"A book by Robert Greene that explores human behavior, motivation, and relationships."
+};
 var product3 = {
-    name:"Dell Dimension 2400",
+    name:"The Psychology of Money",
     id:"2400X",
-    desc:"A fast 2.4 ghz computer"
-};var companyname5 = "Izabela's Book Store";
+    desc:"A book by Morgan Housel about money, investing, and financial decision making."
+};
+var companyname5 = "Izabela's Book Store";
 var address3 = "492 Main St. Valencia, CA 91344";
 var phonenumber3 = "(555) 869-1234";
 function getHeader() {
@@ -67,4 +70,15 @@ function hitCard236() {
     } else {
         alert("You need to deal cards first, or you already hit all cards.");
     }
+}
+function dealCards244() {
+    var html = "";
+    cardnum789 = 2;
+    html += "<h2>Black Jack</h2>";
+    html += "<img id='card0' src='" + cardimgurl245 + "0.gif'>";
+    html += "<img id='card1' src='" + cardimgurl245 + "51.gif'>";
+    html += "<img id='card2' src='" + cardimgurl245 + "52.gif'>";
+    html += "<img id='card3' src='" + cardimgurl245 + "52.gif'>";
+    html += "<img id='card4' src='" + cardimgurl245 + "52.gif'>";
+    document.getElementById("main829").innerHTML = html;
 }
