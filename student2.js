@@ -58,7 +58,7 @@ function makeMain3(myproduct) {
 function execButton936(myproduct) {
     document.getElementById("main829").innerHTML = makeMain3(myproduct);
 }
-function dealCards2440() {
+function dealCards244() {
     var html = "";
     html += "<h2>Black Jack</h2>";
     html += "<img id='card1' src='" + cardimgurl245 + "0.gif'>";
