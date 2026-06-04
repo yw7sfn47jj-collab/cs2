@@ -82,3 +82,10 @@ function dealCards244() {
     html += "<img id='card4' src='" + cardimgurl245 + "52.gif'>";
     document.getElementById("main829").innerHTML = html;
 }
+function makeLinkBar270(myproduct) {
+    var html = "";
+    html = html + "<a href='https://www.paypal.com'>Add ";
+    html = html + myproduct.name;
+    html = html + " To Cart</a>";
+    return html;
+}
