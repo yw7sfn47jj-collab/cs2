@@ -50,3 +50,6 @@ function makeMain3() {
   html = html + "Product Image: <br>";
   return html;
 }
+function execButton936(myproduct) {
+    document.getElementById("main829").innerHTML = makeMain3(myproduct);
+}
