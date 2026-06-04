@@ -1,5 +1,6 @@
 var imgurl893 = "https://www.college1.com/images/";
 var cardimgurl245 = "https://www.college1.com/images/cards/gbCard";
+var cardnum789 = -1;
 var product1 = {
     name:"HP 4426",
     id:"4426",
@@ -41,6 +42,7 @@ function makeMenu5() {
     html += "<button onclick='execButton936(product2)'>Product #2</button>";
     html += "<button onclick='execButton936(product3)'>Product #3</button>";
     html += "<button onclick='dealCards244()'>Deal Cards</button>";
+    html += "<button onclick='hitCard236()'>Hit Card</button>";
     return html;
 }
 function makeMain3(myproduct) {
@@ -58,13 +60,11 @@ function makeMain3(myproduct) {
 function execButton936(myproduct) {
     document.getElementById("main829").innerHTML = makeMain3(myproduct);
 }
-function dealCards244() {
-    var html = "";
-    html += "<h2>Black Jack</h2>";
-    html += "<img id='card1' src='" + cardimgurl245 + "0.gif'>";
-    html += "<img id='card2' src='" + cardimgurl245 + "51.gif'>";
-    html += "<img id='card3' src='" + cardimgurl245 + "52.gif'>";
-    html += "<img id='card4' src='" + cardimgurl245 + "52.gif'>";
-    html += "<img id='card5' src='" + cardimgurl245 + "52.gif'>";
-    document.getElementById("main829").innerHTML = html;
+function hitCard236() {
+    if (cardnum789 >= 0 && cardnum789 < 5) {
+        document.getElementById("card" + cardnum789).src = cardimgurl245 + cardnum789 + ".gif";
+        cardnum789 = cardnum789 + 1;
+    } else {
+        alert("You need to deal cards first, or you already hit all cards.");
+    }
 }
