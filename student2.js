@@ -45,7 +45,7 @@ function makeMain3(myproduct) {
   html = html + "My Product:<br>";
   html = html + "Product Name: " + myproduct.name + "<br>";
   html = html + "Product ID: " + myproduct.id + "<br>";
-  html = html + "Product Description: " + myproduct.desc + <br>";
+  html = html + "Product Description: " + myproduct.desc + "<br>";
   html = html + "Shopping Cart Link Bar <br>";
   html = html + "Product Image: <br>";
   return html;
