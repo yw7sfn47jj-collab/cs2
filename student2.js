@@ -48,7 +48,7 @@ function makeMenu5() {
     html += "<button onclick='execButton936(product3)'>Product #3</button>";
     html += "<button onclick='dealCards244()'>Deal Cards</button>";
     html += "<button onclick='hitCard236()'>Hit Card</button>";
-    html += "<button onclick='popupAd9170()'>PopUp Ad</button>";
+    html += "<button onclick='popupAd917()'>PopUp Ad</button>";
     html += "<button onclick='closeAd917()'>Close Ad</button>";
     html += "<button onclick='makeForm571()'>Enter Data</button>";
     return html;
