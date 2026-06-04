@@ -33,11 +33,13 @@ function getFooter(cname, address, phone) {
   html = html + navigator.platform;
   return html;
 }
-function makeMenu5(size) {
-  var html = "My Menu:<br>";
-  for (var i = 0; i < size; i++) {
-    html = html + "Button ";
-  } 
+function makeMenu5() {
+    var html = "Menu: ";
+    html += "<button onclick='execButton936(product1)'>Product #1</button>";
+    html += "<button onclick='execButton936(product2)'>Product #2</button>";
+    html += "<button onclick='execButton936(product3)'>Product #3</button>";
+    return html;
+} 
   return html;
 }
 function makeMain3() {
