@@ -1,3 +1,5 @@
+var imgurl893 = "https://www.college1.com/images/";
+var cardimgurl245 = "https://www.college1.com/images/cards/gbCard";
 var product1 = {
     name:"HP 4426",
     id:"4426",
@@ -14,42 +16,55 @@ var product3 = {
 var address3 = "492 Main St. Valencia, CA 91344";
 var phonenumber3 = "(555) 869-1234";
 function getHeader() {
-  var html = "";
-  html = html + "<div style='background-color:navy; color:white; padding:25px; text-align:center; width:100%;'>";
-  html = html + "<h1 style='font-size:40px;'>" + companyname5 + "</h1>";
-  html = html + "</div>";
-  return html;
+    var html = "";
+    html = html + "<div style='background-color:navy; color:white; padding:25px; text-align:center; width:100%;'>";
+    html = html + "<h1 style='font-size:40px;'>" + companyname5 + "</h1>";
+    html = html + "</div>";
+    return html;
 }
 function getFooter(cname, address, phone) {
-  var html = "";
-  html = html + "<div style='background-color:navy; color:white; padding:15px; text-align:center; width:100%; font-size:12px;'>";
-  html = html + cname + "<br>";
-  html = html + address + "<br>";
-  html = html + phone;
-  html = html + "</div>";
-  html = html + "<br>";
-  html = html + navigator.appName + " ";
-  html = html + navigator.appVersion + " ";
-  html = html + navigator.platform;
-  return html;
+    var html = "";
+    html = html + "<div style='background-color:navy; color:white; padding:15px; text-align:center; width:100%; font-size:12px;'>";
+    html = html + cname + "<br>";
+    html = html + address + "<br>";
+    html = html + phone;
+    html = html + "</div>";
+    html = html + "<br>";
+    html = html + navigator.appName + " ";
+    html = html + navigator.appVersion + " ";
+    html = html + navigator.platform;
+    return html;
 }
 function makeMenu5() {
     var html = "Menu: ";
     html += "<button onclick='execButton936(product1)'>Product #1</button>";
     html += "<button onclick='execButton936(product2)'>Product #2</button>";
     html += "<button onclick='execButton936(product3)'>Product #3</button>";
+    html += "<button onclick='dealCards2440()'>Deal Cards</button>";
     return html;
 }
 function makeMain3(myproduct) {
-  var html = "";
-  html = html + "My Product:<br>";
-  html = html + "Product Name: " + myproduct.name + "<br>";
-  html = html + "Product ID: " + myproduct.id + "<br>";
-  html = html + "Product Description: " + myproduct.desc + "<br>";
-  html = html + "Shopping Cart Link Bar <br>";
-  html = html + "Product Image: <br>";
-  return html;
+    var html = "";
+    var produrl = imgurl893 + myproduct.id + ".gif";
+    html = html + "My Product:<br>";
+    html = html + "Product Name: " + myproduct.name + "<br>";
+    html = html + "Product ID: " + myproduct.id + "<br>";
+    html = html + "Product Description: " + myproduct.desc + "<br>";
+    html = html + "Shopping Cart Link Bar <br>";
+    html = html + "Product Image:<br>";
+    html = html + "<img src='" + produrl + "'>";
+    return html;
 }
 function execButton936(myproduct) {
     document.getElementById("main829").innerHTML = makeMain3(myproduct);
+}
+function dealCards2440() {
+    var html = "";
+    html += "<h2>Black Jack</h2>";
+    html += "<img id='card1' src='" + cardimgurl245 + "0.gif'>";
+    html += "<img id='card2' src='" + cardimgurl245 + "51.gif'>";
+    html += "<img id='card3' src='" + cardimgurl245 + "52.gif'>";
+    html += "<img id='card4' src='" + cardimgurl245 + "52.gif'>";
+    html += "<img id='card5' src='" + cardimgurl245 + "52.gif'>";
+    document.getElementById("main829").innerHTML = html;
 }
