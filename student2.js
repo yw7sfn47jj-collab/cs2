@@ -1,5 +1,7 @@
 var imgurl893 = "https://www.college1.com/images/";
 var cardimgurl245 = "https://www.college1.com/images/cards/gbCard";
+var adnum361 = 1;
+var winobj422 = -1;
 var cardnum789 = -1;
 var product1 = {
     name:"Atomic Habits",
@@ -46,6 +48,8 @@ function makeMenu5() {
     html += "<button onclick='execButton936(product3)'>Product #3</button>";
     html += "<button onclick='dealCards244()'>Deal Cards</button>";
     html += "<button onclick='hitCard236()'>Hit Card</button>";
+    html += "<button onclick='popupAd9170()'>PopUp Ad</button>";
+    html += "<button onclick='closeAd9170()'>Close Ad</button>";
     return html;
 }
 function makeMain3(myproduct) {
@@ -88,4 +92,35 @@ function makeLinkBar270(myproduct) {
     html = html + myproduct.name;
     html = html + " To Cart</a>";
     return html;
+}
+function popupAd9170() {
+    winobj422 = window.open("", "adWindow", "width=350,height=200");
+    var html = "";
+    if (adnum361 == 1) {
+        html += "<body style='background-color:lightblue; text-align:center;'>";
+        html += "<h1>Buy Atomic Habits!</h1>";
+        html += "<p>Build better habits today.</p>";
+        html += "</body>";
+        adnum361 = 2;
+    } else if (adnum361 == 2) {
+        html += "<body style='background-color:lightgreen; text-align:center;'>";
+        html += "<h1>Read Robert Greene!</h1>";
+        html += "<p>Discover The Laws of Human Nature.</p>";
+        html += "</body>";
+        adnum361 = 3;
+    } else {
+        html += "<body style='background-color:pink; text-align:center;'>";
+        html += "<h1>Psychology of Money</h1>";
+        html += "<p>Learn smarter money choices.</p>";
+        html += "</body>";
+        adnum361 = 1;
+    }
+    winobj422.document.open();
+    winobj422.document.write(html);
+    winobj422.document.close();
+}
+function closeAd9170() {
+    if (winobj422 != -1) {
+        winobj422.close();
+    }
 }
