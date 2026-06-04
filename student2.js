@@ -40,7 +40,7 @@ function makeMenu5() {
     html += "<button onclick='execButton936(product1)'>Product #1</button>";
     html += "<button onclick='execButton936(product2)'>Product #2</button>";
     html += "<button onclick='execButton936(product3)'>Product #3</button>";
-    html += "<button onclick='dealCards2440()'>Deal Cards</button>";
+    html += "<button onclick='dealCards244()'>Deal Cards</button>";
     return html;
 }
 function makeMain3(myproduct) {
