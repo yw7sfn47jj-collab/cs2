@@ -142,32 +142,5 @@ function makeForm571() {
     html += "</form>";
     document.getElementById("main829").innerHTML = html;
 }
-function checkForm881() {
-    var msg = "";
-    if (document.customerform.firstname.value == "") {
-        msg += "First Name\n";
-    }
-    if (document.customerform.lastname.value == "") {
-        msg += "Last Name\n";
-    }
-    if (document.customerform.address.value == "") {
-        msg += "Address\n";
-    }
-    if (document.customerform.city.value == "") {
-        msg += "City\n";
-    }
-    if (document.customerform.state.value == "") {
-        msg += "State\n";
-    }
-    if (document.customerform.zip.value == "") {
-        msg += "Zip\n";
-    }
-    if (document.customerform.emailaddr.value == "") {
-        msg += "Email Address\n";
-    }
-    if (msg != "") {
-        alert("Missing:\n" + msg);
-        return false;
-    }
     return true;
 }
