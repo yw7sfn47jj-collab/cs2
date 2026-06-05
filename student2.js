@@ -1,3 +1,4 @@
+var imgurl893 = "https://www.college1.com/images/";
 var cardimgurl245 = "https://www.college1.com/images/cards/gbCard";
 var adnum361 = 1;
 var winobj422 = -1;
