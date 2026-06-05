@@ -3,6 +3,10 @@ var cardimgurl245 = "https://www.college1.com/images/cards/gbCard";
 var adnum361 = 1;
 var winobj422 = -1;
 var cardnum789 = -1;
+var product4 = {};
+var product5 = {};
+var jsonobj4 = { "type":"books", "number":"1" };
+var jsonobj5 = { "type":"books", "number":"2" };
 var product1 = {
     name:"Atomic Habits",
     id:"4426",
@@ -51,6 +55,8 @@ function makeMenu5() {
     html += "<button onclick='popupAd917()'>PopUp Ad</button>";
     html += "<button onclick='closeAd917()'>Close Ad</button>";
     html += "<button onclick='makeForm571()'>Enter Data</button>";
+    html += "<button onclick='execButton936(product4)'>Product #4</button>";
+    html += "<button onclick='execButton936(product5)'>Product #5</button>";
     return html;
 }
 function makeMain3(myproduct) {
@@ -170,4 +176,23 @@ function checkForm881() {
         return false;
     }
     return true;
+}
+function getProduct912(jsonobj) {
+    var server = "https://www.college1.com/getproduct.php";
+    var jsonstr = JSON.stringify(jsonobj);
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("GET", server + "?jsonstr=" + jsonstr, true);
+    xmlhttp.send();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            replystr = this.responseText;
+            if (product4 == null) {
+                product4 = JSON.parse(replystr);
+            } else if (product5 == null) {
+                product5 = JSON.parse(replystr);
+            } else {
+                console.log("Error, no object variable available");
+            }
+        }
+    };
 }
